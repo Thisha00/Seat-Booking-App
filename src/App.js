@@ -5,16 +5,23 @@ import "./App.css";
 
 function App() {
   const generateSeats = () => {
-    let seats = [];
-    for (let i = 1; i <= 20; i++) {
+  let seats = [];
+  let id = 1;
+
+  for (let row = 0; row < 6; row++) {
+    for (let col = 0; col < 5; col++) {
       seats.push({
-        id: i,
-        booked: Math.random() < 0.2, // some seats already booked
+        id: id,
+        row: String.fromCharCode(65 + row),
+        number: col + 1,
+        booked: Math.random() < 0.2,
         selected: false,
       });
+      id++;
     }
-    return seats;
-  };
+  }
+  return seats;
+};
 
   const [seats, setSeats] = useState(generateSeats());
 

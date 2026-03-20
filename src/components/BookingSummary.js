@@ -6,7 +6,10 @@ function BookingSummary({ selectedSeats }) {
 
   return (
     <div>
-      <h3>Selected Seats:</h3>
+      <h3>
+      Selected Seats:{" "}
+      {selectedSeats.length > 0 ? selectedSeats.join(", ") : "None"}
+      </h3>
       <p>{selectedSeats.join(", ") || "None"}</p>
       <h3>Total Price: Rs. {total}</h3>
     </div>

@@ -1,0 +1,79 @@
+.cinema-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Screen */
+.screen {
+  background: #444;
+  color: white;
+  padding: 10px;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Seats layout */
+.seats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+/* Row label (A, B, C...) */
+.row-label {
+  width: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Seat styles */
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: #b0bec5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Selected */
+.seat.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Booked */
+.seat.booked {
+  background-color: #e53935;
+  cursor: not-allowed;
+  color: white;
+}
+
+/* Hover effect */
+.seat:hover:not(.booked) {
+  transform: scale(1.1);
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .seat {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .screen {
+    width: 90%;
+  }
+}

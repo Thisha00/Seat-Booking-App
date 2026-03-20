@@ -7,8 +7,14 @@ function Seat({ seat, onSelect }) {
     }
   };
 
+  let seatClass = "seat";
+
+  if (seat.booked) seatClass += " booked";
+  else if (seat.selected) seatClass += " selected";
+
   return (
     <div
+      className={seatClass}
       onClick={handleClick}
       style={{
         width: "40px",
