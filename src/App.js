@@ -6,20 +6,19 @@ import "./App.css";
 function App() {
   const generateSeats = () => {
   let seats = [];
-  let id = 1;
 
   for (let row = 0; row < 6; row++) {
-    for (let col = 0; col < 5; col++) {
+    for (let col = 1; col <= 15; col++) {
       seats.push({
-        id: id,
+        id: `${String.fromCharCode(65 + row)}${col}`, // A1, A2...
         row: String.fromCharCode(65 + row),
-        number: col + 1,
+        number: col,
         booked: Math.random() < 0.2,
         selected: false,
       });
-      id++;
     }
   }
+
   return seats;
 };
 
