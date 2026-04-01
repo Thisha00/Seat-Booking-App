@@ -94,3 +94,62 @@
     width: 10px;
   }
 }
+
+/* Regular seats */
+.seat.regular {
+  background-color: #90caf9;
+}
+
+/* VIP seats */
+.seat.vip {
+  background-color: #ffd54f;
+}
+
+/* Selected */
+.seat.selected {
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+/* Booked */
+.seat.booked {
+  background-color: #e53935 !important;
+  color: white;
+}
+
+/* Summary section */
+.summary {
+  margin-top: 20px;
+}
+
+/* Legend container */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Each item */
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Small color box */
+.box {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+/* VIP box */
+.vip-box {
+  background-color: #ffd54f;
+}
+
+/* Regular box */
+.regular-box {
+  background-color: #90caf9;
+}

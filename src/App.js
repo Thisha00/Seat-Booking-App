@@ -9,10 +9,14 @@ function App() {
 
   for (let row = 0; row < 6; row++) {
     for (let col = 1; col <= 15; col++) {
+      let type = col > 5 && col <= 10 ? "VIP" : "Regular";
+
       seats.push({
-        id: `${String.fromCharCode(65 + row)}${col}`, // A1, A2...
+        id: `${String.fromCharCode(65 + row)}${col}`,
         row: String.fromCharCode(65 + row),
         number: col,
+        type: type,
+        price: type === "VIP" ? 2200 : 1800,
         booked: Math.random() < 0.2,
         selected: false,
       });
@@ -43,7 +47,7 @@ function App() {
 
       <SeatGrid seats={seats} onSelect={handleSelect} />
 
-      <BookingSummary selectedSeats={selectedSeats} />
+      <BookingSummary seats={seats} />
     </div>
   );
 }

@@ -10,6 +10,9 @@ function Seat({ seat, onSelect }) {
 
   let seatClass = "seat";
 
+  if (seat.type === "VIP") seatClass += " vip";
+  else seatClass += " regular";
+
   if (seat.booked) seatClass += " booked";
   else if (seat.selected) seatClass += " selected";
 
