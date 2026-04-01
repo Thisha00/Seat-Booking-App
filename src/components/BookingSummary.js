@@ -18,7 +18,7 @@ function BookingSummary({ seats }) {
           : "None"}
       </p>
 
-      <h3>Total Price: Rs. {total.toFixed(2)}</h3>
+      
 
       {/* 🎨 Legend */}
       <div className="legend">

@@ -2,3 +2,74 @@ body {
   font-family: Arial;
   text-align: center;
 }
+
+
+
+/* Main layout grid */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* LEFT */
+.left-panel {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+
+/* CENTER */
+.center-panel {
+  text-align: center;
+}
+
+/* RIGHT */
+.right-panel {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 80px;
+  margin-top: 150px;
+}
+
+/* BOTTOM */
+.bottom-panel {
+  grid-column: 1 / span 3;
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Buttons */
+button {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background: #ccc;
+  cursor: pointer;
+}
+
+/* Active */
+button.active {
+  background: #4caf50;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-panel {
+    grid-column: auto;
+  }
+}
